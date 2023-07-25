@@ -1,0 +1,830 @@
+.hoverProfilepicture{
+    position: absolute;
+    top: 25px;
+    left: 48%;
+    transform: translate(-50%, 0%);
+
+}
+
+@media screen and (max-width: 1000px){
+    .AboutSection{
+        position: relative;
+        left: 1%;
+        top: 0%
+    }
+    
+}
+
+
+
+@media screen and (max-width: 510px){
+    .AboutSection{
+        position: relative;
+        left: 124%;
+        transform: translate(-50%, 0%);
+        top: -20%
+    }
+    
+}
+
+
+@media screen and (max-width: 800px){
+    .AboutSection{
+        position: relative;
+        left: 1%;
+        top: -2%
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    .hoverProfilepicture{
+        position: relative;
+        left: 78%;
+        top: 15%;
+        transform: translate(-50%, 0%);
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 1250px){
+    .Aboutdes{
+        visibility: hidden;
+    }
+    
+}
+
+@media screen and (max-width: 1250px){
+    .Aboutdes::before{
+        visibility: visible;
+        content: '...';
+        margin-left: 470px;
+        margin-top: 100px;
+        padding-bottom: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        font-weight: bolder;
+        font-size: 50px;
+        background-color: rgba(60, 62, 65, 0.219);
+        color: rgb(243, 194, 34);
+        
+    }
+    
+}
+
+
+
+
+
+.profilepic{
+    display: block;
+    width: 300px;
+    height: 300px; 
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 50%;
+}
+
+
+.overlaydescription1{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.473);
+    overflow: hidden;
+    width: 300px;
+    height: 0px;
+    transition: 0.1s ease-in-out;
+    border-radius: 100%;
+
+}
+
+
+.hoverProfilepicture:hover .overlaydescription1{
+    height: 300px;
+    border-radius: 100%;
+    width: 300px;
+
+
+}
+
+.overlaydescription2{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.473);
+    overflow: hidden;
+    width: 300px;
+    height: 0px;
+    transition: 0.1s ease-in-out;
+
+
+}
+
+.hovertext:active .overlaydescription2{
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    color: aliceblue;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    
+
+}
+
+.decorpics{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+.intro{
+    position: absolute;
+    top: 170px;
+    left: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.intro2{
+    position: absolute;
+    top: 187px;
+    left: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.About{
+    position: absolute;
+    top: 310px;
+    left: 48%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, 0%);
+}
+
+.Aboutdes{
+    position: absolute;
+    top: 370px;
+    left: 48%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    text-align:justify;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    background-color: rgba(60, 62, 65, 0.219);
+    width: 1100px;
+    transform: translate(-50%, 0%);
+    padding: 25px;
+    border-radius: 25px;
+    
+}
+
+
+.description2{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+    display: grid;
+    display: inline-block;
+    border-radius: 30px;
+    transform: translate(-50%, 0%);
+   
+}
+
+.skillHead{
+    position: relative;
+    top: -5%;
+    display: inline-block;
+    left: 49%
+}
+
+@media screen and (max-width: 510px){
+    .skillHead{
+        position: relative;
+        left: 97%;
+        transform: translate(-50%, 0%);
+        top: -30%;
+        
+
+        
+    }
+    
+}
+
+
+.skillcaption{
+    position: absolute;
+    top: 700px;
+    left: 49.7%;
+    transform: translate(-50%, 0%);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    text-decoration: underline;
+}
+
+.skillsection{
+    place-items: center;
+    justify-content: center;
+    
+}
+
+
+.Software{
+    color: rgb(245, 187, 187);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+   
+}
+
+.hardware{
+    color: rgb(245, 187, 187);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    
+}
+
+.Extratext{
+    color: rgb(245, 187, 187);
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+
+.softpic{
+    width: 300px;
+    height: 390px;
+    object-fit: cover;
+    opacity: 0.1;
+    border-radius: 20px;
+    position: relative;
+}
+
+.sskill{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.Softskill{
+    position: relative;
+    left: -20%;
+    top: 5%;
+}
+
+.Hardskill{
+    position: relative;
+    left: -9%;
+    top: 5%;
+
+}
+
+
+.Extra{
+
+    position: relative;
+    left: 10%;
+    top: 5%;
+}
+
+
+
+@media screen and (max-width: 1465px){
+    .Extra{
+        position: relative;
+        left: 51%;
+        top: 5%;
+    }
+    
+    }
+
+
+@media screen and (max-width: 987px){
+.Softskill{
+    position: relative;
+    left: -2%;
+    top: -40%;
+}
+
+}
+@media screen and (max-width: 987px){
+    .Hardskill{
+        position: relative;
+        left: 0%;
+        top: -50%;
+    }
+    
+    }
+
+@media screen and (max-width: 987px){
+    .skillHead{
+        position: relative;
+        left: 49%;
+        top: -13%;
+    }
+    
+    }
+
+
+
+@media screen and (max-width: 1465px){
+    .Hardskill{
+        position: relative;
+        left: -7.5%;
+        top: 5%;
+    }
+    
+    }
+
+@media screen and (max-width: 1465px){
+    .Extra{
+        position: relative;
+        left: 10%;
+        top: 5%;
+    }
+        
+    }
+
+
+
+    @media screen and (max-width: 1456px){
+    .Extra{
+        position: relative;
+        left: 51%;
+        top: 5%;
+    }
+        
+    }
+
+
+    @media screen and (max-width: 1456px){
+        .Hardskill{
+            position: relative;
+            left: 10%;
+            top: 5%;
+        }
+            
+        }
+    
+        @media screen and (max-width: 987px){
+            .Hardskill{
+                position: relative;
+                left: -2%;
+                top: -30%;
+            }
+            
+            }
+            @media screen and (max-width: 987px){
+                .Extra{
+                    position: relative;
+                    left: -2%;
+                    top: -20%;
+                }
+                
+                }
+
+                @media screen and (max-width: 510px){
+                    .skillHead{
+                        position: relative;
+                        left: 97%;
+                        transform: translate(-50%, 0%);
+                        top: -40%;
+                        
+                
+                        
+                    }
+                    
+                }
+
+.softwarepic{
+    position: relative;
+}
+
+.ssskill1{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill2{
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill3{
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill4{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill5{
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill6{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, 0%); 
+}
+.ssskill7{
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+}
+.ssskill8{
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.ssskill9{
+    position: absolute;
+    top: 305px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+
+
+
+.hardpic{
+    width: 300px;
+    height: 390px;
+    object-fit: cover;
+    opacity: 0.1;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 40px;
+}
+
+
+.hardwarepic{
+    position: relative;
+}
+
+
+.hsskill1{
+    position: absolute;
+    top: 20px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill2{
+    position: absolute;
+    top: 45px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill3{
+    position: absolute;
+    top: 73px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill4{
+    position: absolute;
+    top: 100px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill5{
+    position: absolute;
+    top: 148px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill6{
+    position: absolute;
+    top: 177px;
+    left: 55%;
+    transform: translate(-50%, 0%); 
+}
+.hsskill7{
+    position: absolute;
+    top: 205px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    
+}
+.hsskill8{
+    position: absolute;
+    top: 230px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+.hsskill9{
+    position: absolute;
+    top: 275px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+
+.hsskill10{
+    position: absolute;
+    top: 320px;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+
+
+
+.extrapic{
+    width: 300px;
+    height: 390px;
+    object-fit: cover;
+    opacity: 0.1;
+    border-radius: 20px;
+    position: relative;
+}
+
+.extrapictures{
+    position: relative;
+}
+
+.esskill1{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill2{
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill3{
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill4{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill5{
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill6{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, 0%); 
+}
+.esskill7{
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+}
+.esskill8{
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.esskill9{
+    position: absolute;
+    top: 305px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+
+
+.softdes{
+    position: absolute;
+    top: 100px;
+
+}
+
+
+
+  
+@media screen and (max-width: 990px){
+    .Hardskill{
+       margin-left: -6%;
+        
+    }
+    
+}    
+
+    
+
+
+
+@media screen and (max-width: 510px){
+    .Softskill{
+        position: absolute;
+        left: 91%;
+        transform: translate(-50%, 0%);
+        top: -50%;
+        
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .Software{
+        position: absolute;
+        left: 48%;
+        transform: translate(-50%, 0%);
+        top: -15%;
+        
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 510px){
+    .Hardskill{
+        position: absolute;
+        left: 98%;
+        transform: translate(-50%, 0%);
+        top: 40%;
+        
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .Extra{
+        position: relative;
+        left: 80%;
+        transform: translate(-50%, 0%);
+        top: 145%;
+        
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .AboutSection{
+        position: relative;
+        left: 90%;
+        top: -15%
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .hoverProfilepicture{
+        position: relative;
+        left: 100%;
+        top: 15%
+    }
+    
+}
+
+
+
+
+
+
+@media screen and (max-width: 510px){
+    .softwarepic{
+        
+        margin-left: -14px ;
+        
+    }
+    
+}
+
+
+
+@media screen and (max-width: 510px){
+    .extrapictures{
+        
+        margin-left: -14px ;
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .Extratext{
+        
+        margin-left: -9px ;
+       
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .hardware{
+        
+        margin-left: -9px ;
+       
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .hardwarepic{
+        
+        margin-left: -55px ;
+       
+        
+    }
+    
+}
+
+@media screen and (max-width: 510px){
+    .skillcaption{
+        
+        margin-left: -34px ;
+       
+        
+    }
+    
+}
+
+
+
+
+
+
+.generalinfo{
+    position: absolute;
+    top: 1400px;
+}

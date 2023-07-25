@@ -1,0 +1,552 @@
+@media screen and (max-width: 730px){
+    .infoMain{
+        display: none;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+body {
+    background-color: rgb(28, 29, 36);
+    border: none;
+    border-radius: 16px;
+}
+
+.profile{
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 75px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.Name{
+    margin-left: 75px;
+    font-weight:800;
+    font-size: 15px;
+    margin-top: 5px;
+    color: white;
+    font-family: 'Roboto', san-serif;
+    border-radius: 15px;
+}
+
+.Discipline{
+    margin-left: 45px;
+    font-size: 12px;
+    margin-top: -9px;
+    color: rgb(151, 151, 151);
+    font-family: Courier, monospace;
+    font-weight: bold;
+}
+
+.School{
+    margin-left: 25px;
+    font-size: 11px;
+    margin-top: -9px;
+    color: rgb(151, 151, 151);
+    font-family: Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.Residence{
+    font-size: 12px;
+    color:white;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+
+.Grade{
+    font-size: 12px;
+    color:white;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    margin-left: 18px;
+    margin-top: 1px;
+}
+
+.ResInfo{
+    font-size: 12px;
+    color:rgb(240, 224, 172);
+    font-family: 'Tahoma';
+    margin-left: -5px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.GradeInfo{
+    font-size: 12px;
+    color:rgb(240, 224, 172);
+    font-family: 'Tahoma';
+    margin-left: -5px;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+.Age{
+    font-size: 12px;
+    color:white;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    margin-left: 18px;
+    margin-top: 1px;
+}
+
+.AgeInfo{
+    font-size: 12px;
+    color:rgb(240, 224, 172);
+    font-family: 'Tahoma';
+    margin-left: 92px;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+.line-1{
+    height: 1px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: 12px;
+}
+
+.English{
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.Mandarin{
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.Fujianese{
+    width: 50px;
+    margin-right: px;
+    margin-top: 25px;
+}
+
+.Eng{
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11.5px;
+    color: antiquewhite;
+}
+
+.Man{
+    width: 50px;
+    margin-left: 13px;
+    margin-top: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11.5px;
+    color: antiquewhite;
+}
+
+.Fujian{
+    width: 50px;
+    margin-left: -5px;
+    margin-top: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11.5px;
+    color: antiquewhite;
+}
+
+.line-2{
+    height: 1px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.skill-1{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-1{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-1-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.skill-2{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-2{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-2-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.skill-3{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-3{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-3-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+.skill-4{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-4{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-4-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+.skill-5{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-5{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-5-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+.skill-6{
+    font-size: 12px;
+    color:rgb(253, 204, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.mastery-6{
+    font-size: 12px;
+    color:rgb(255, 203, 203);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 67px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mastery-6-bar{
+    height: 3px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-1{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 140px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-2{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 120px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-3{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 110px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-4{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 80px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-5{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 160px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.masteryfill-6{
+    height: 3px;
+    background: rgb(253, 245, 123);
+    margin-left: -102px;
+    width: 180px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.line-3{
+    height: 1px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.resumebut{
+    height: 28px; 
+    background-color: rgb(13, 63, 109); 
+    width: 180px; 
+    border-radius: 15px;
+    margin-top: 19px;
+    margin-left: 38px;
+    font-family: courier, monospace;
+    border: none;
+    color:rgb(243, 215, 215);
+    font-weight: bold;
+    padding-top: 3px;
+    cursor:pointer;
+}
+
+.resumebut:hover{
+    opacity: 0.8;
+}
+
+.line-4{
+    height: 1px;
+    background: rgb(100, 100, 100);
+    margin-left: 28px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.facebooklink{
+    margin-top: 18px;
+    margin-left: 18px;
+    background-color:rgb(25, 26, 32); 
+    border: none;
+    cursor: pointer;
+}
+
+.facebooklink:hover{
+    opacity: 0.8;
+}
+
+.fb{
+    width: 20px;
+    margin-top: 20px;
+}
+
+.instalink{
+    margin-top: 18px;
+    margin-left: 25px;
+    background-color:rgb(25, 26, 32); 
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.instalink:hover{
+    opacity: 0.8;
+}
+
+.insta{
+    width: 20px;
+    margin-top: 20px;
+}
+
+.githublink{
+    margin-top: 18px;
+    margin-left: 35px;
+    background-color:rgb(25, 26, 32); 
+    border: none;
+    cursor: pointer;
+}
+
+.githublink:hover{
+    opacity: 0.8;
+}
+
+.github{
+    width: 20px;
+    margin-top: 20px;
+}
+
+.linkedin-link{
+    margin-top: 18px;
+    margin-left: 48px;
+    background-color:rgb(25, 26, 32); 
+    border: none;
+    cursor: pointer;
+}
+
+.linkedin-link:hover{
+    opacity: 0.8;
+}
+
+.linkedin{
+    width: 20px;
+    margin-top: 20px;
+}
+
+.check1{
+    width: 15px;
+    margin-top: 16px;
+    margin-left: 30px;
+}
+
+.digi{
+    margin-left: 23px;
+    font-family: Courier, monospace;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 18px;
+    color: rgb(182, 179, 175);
+}
+
+.check2{
+    width: 15px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.circuitdesign{
+    margin-left: 23px;
+    font-family: Courier, monospace;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(182, 179, 175);
+}
+
+.check3{
+    width: 15px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.datacol{
+    margin-left: 23px;
+    font-family: Courier, monospace;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(182, 179, 175);
+}
+
+.check4{
+    width: 15px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.multi{
+    margin-left: 23px;
+    font-family: Courier, monospace;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(182, 179, 175);
+}
+
+
+
+
+
+
+

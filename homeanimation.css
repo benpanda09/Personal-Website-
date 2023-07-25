@@ -1,0 +1,699 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: rgb(28, 29, 36);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper {
+    --min-width: 350px;
+    --mid-width: 90vw;
+    --max-width: 900px;
+    --clamped-width: clamp(var(--min-width), var(--mid-width), var(--max-width));
+    position: relative;
+    padding: 1rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-width: var(--clamped-width);
+    max-width: var(--clamped-width);
+    height: fit-content;
+    border-radius: 25% / 50%;
+    overflow: hidden;
+  }
+  
+  .wrapper::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 25% / 50%;
+    box-shadow: inset 0 0 calc(var(--clamped-width) / 15) calc(var(--clamped-width) / 15) rgb(28, 29, 36);
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(calc(var(--clamped-width) / 1200));
+  }
+  
+  .stars::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: url(#stars);
+    background-color: hsla(45, 100%, 90%, 0.8);
+  }
+  
+  .lightbulb {
+    --lightbulb-relative-width: 0.25;
+    --rel-clamped-width: calc(var(--lightbulb-relative-width) * var(--clamped-width));
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-left: calc(100% * (1 - var(--lightbulb-relative-width)) / 2);
+    width: calc(100% * var(--lightbulb-relative-width));
+    transform-style: preserve-3d;
+  }
+  
+  .lightbulb-glass {
+    position: relative;
+    width: 100%;
+    transform: translateZ(calc(var(--rel-clamped-width) / 2));
+    aspect-ratio: 0.717758103460937;
+  }
+  
+  .lightbulb-glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: url(#lbGlassClip);
+    filter: blur(0.5px);
+    background-color: hsla(45, 100%, 80%, 0.2);
+  }
+  
+  
+  .lightbulb-glass.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateZ(calc(-1000 * var(--rel-clamped-width)));
+    filter: blur(calc(var(--rel-clamped-width) / 2));
+  }
+  
+  
+  .lightbulb-glass.shadow::after {
+    background-color: hsla(45, 100%, 80%, 1);
+  }
+  
+  .lightbulb-sheen {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateZ(calc(var(--rel-clamped-width) / 2)) rotate(9deg);
+  }
+  
+  .lightbulb-sheen::after {
+    content: '';
+    position: absolute;
+    top: -7%;
+    left: -7%;
+    width: 130%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(2px);
+    box-shadow: inset 0 0 calc(var(--rel-clamped-width) / 7) hsla(45, 100%, 80%, 1),
+    inset 0 0 calc(var(--rel-clamped-width) / 7) hsla(45, 100%, 80%, 1);
+    transform-origin: 0 100%;
+  }
+  
+  .lightbulb-socket {
+    position: relative;
+    left: 32.4%;
+    width: 36.8%;
+    margin-top: -9.6%;
+    transform: translateZ(calc(var(--rel-clamped-width) / 1.9));
+    aspect-ratio: 1.095904862376548;
+    transform-style: preserve-3d;
+  }
+  
+  .lightbulb-socket::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(calc(var(--rel-clamped-width) / 250));
+    clip-path: url(#lbSocketClip);
+    background: radial-gradient(150% 225% at -10% -50%,
+    hsla(45, 0%, 30%, 1) 20%,
+    hsla(45, 0%, 8%, 1) 100%);
+  }
+  
+  .lightbulb-socket::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(calc(var(--rel-clamped-width) / 250));
+    clip-path: url(#lbSocketClip);
+    background: url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    filter: opacity(0.15);
+  }
+  
+  .lightbulb-socket-grooves {
+    z-index: 1;
+    position: absolute;
+    top: 23%;
+    left: 9%;
+    right: 9%;
+    filter: blur(calc(var(--rel-clamped-width) / 150));
+    aspect-ratio: 1.542334024244712;
+  }
+  
+  .lightbulb-socket-grooves::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: url(#lbSocketGroovesClip);
+    background: radial-gradient(150% 150% at -75% 20%,
+    hsla(45, 0%, 0%, 0.1) 65%,
+    hsla(45, 0%, 0%, 0.175) 100%);
+  }
+  
+  .lightbulb-socket-background {
+    position: relative;
+    filter: blur(calc(var(--rel-clamped-width) / 300));
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(0)
+    translateY(-11%)
+    translateZ(calc(-1 * var(--rel-clamped-width) / 2.1));
+    aspect-ratio: 1;
+  }
+  
+  .lightbulb-socket-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: ellipse(49% 11% at 50% 11%);
+    background: radial-gradient(50% 50% at 50% 50%,
+    hsla(45, 0%, 2%, 1) 1%,
+    hsla(45, 0%, 10%, 1) 100%);
+  }
+  
+  .sun {
+    --sun-rotation-speed: 30s;
+    --sun-axis: -30deg;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 1;
+    margin: 30%;
+    border-radius: 50%;
+    box-shadow: 0
+    0
+    calc(var(--rel-clamped-width) / 10)
+    calc(var(--rel-clamped-width) / 15)
+    hsla(45, 100%, 85%, 0.7);
+    transform: rotate(var(--sun-axis));
+    animation: sun-halo 30s infinite;
+  }
+  
+  @keyframes sun-halo {
+    0%, 30%, 80%, 100% {
+      box-shadow: 0
+      0
+      calc(var(--rel-clamped-width) / 10)
+      calc(var(--rel-clamped-width) / 15)
+      hsla(45, 100%, 85%, 0.7);
+    }
+    20%, 50%, 90% {
+      box-shadow: 0
+      0
+      calc(var(--rel-clamped-width) / 10)
+      calc(var(--rel-clamped-width) / 15)
+      hsla(45, 100%, 85%, 0.45);
+    }
+  }
+  
+  .sun-surface {
+    position: absolute;
+    box-shadow: inset
+    0
+    calc(-1 * var(--rel-clamped-width) / 30)
+    calc(var(--rel-clamped-width) / 30)
+    rgba(0, 0, 0, 0.1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .sun-surface::before {
+    --top: -385%;
+    --left: -400%;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--top);
+    left: var(--left);
+    height: 500%;
+    width: 500%;
+    background-image: radial-gradient(50% 50% at center,
+    hsl(39, 100%, 75%) 1%,
+    hsl(39, 100%, 70%) 39%,
+    hsl(39, 100%, 70%) 39%,
+    hsl(33, 100%, 60%) 100%);
+    background-clip: padding-box;
+    background-position: 0% 0%;
+    background-size: 50% 20%;
+    animation:
+            sun-surface-rotation var(--sun-rotation-speed) linear infinite;
+  }
+  
+  @keyframes sun-surface-rotation {
+    0% {
+      top: var(--top);
+      left: var(--left);
+    }
+    100% {
+      top: var(--top);
+      left: calc(var(--left) + 250%);
+    }
+  }
+  
+  .sun-surface::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    right: 0%;
+    width: 300%;
+    aspect-ratio: 1;
+    background: hsla(45, 100%, 80%, 0.3)
+    url('http://assets.iceable.com/img/noise-transparent.png') repeat;
+    animation:
+            sun-dimming 30s linear infinite,
+            sun-noise var(--sun-rotation-speed) linear infinite;
+  }
+  
+  @keyframes sun-noise {
+    0% { transform: translate(0, 0) }
+    100% { transform: translate(50%, 0) }
+  }
+  
+  @keyframes sun-dimming {
+    0%, 30%, 80%, 100% {
+      background: hsla(45, 100%, 80%, 0.3)
+      url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    }
+    20%, 50%, 90% {
+      background: hsla(45, 100%, 80%, 0)
+      url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    }
+  }
+  
+  .sunspots {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    isolation: isolate;
+    filter: drop-shadow(
+            0
+            0
+            calc(var(--rel-clamped-width) / 60)
+            hsl(25, 100%, 50%)
+    );
+  }
+  
+  .sunspot {
+    --size: 5%;
+    --delay: 0s;
+    --spot-angle-axis: 0deg;
+    --axis: 90deg;
+    --spot-angle-start: calc(
+            var(--axis) + var(--spot-angle-axis) - 90deg
+    );
+    --spot-angle-end: calc(
+            var(--axis) - var(--spot-angle-axis) + 90deg
+    );
+    --spot-angle-offset: calc(
+            -1 * (52.5% + var(--size))
+    );
+    position: absolute;
+    inset: 0 0 0 0;
+    animation: sun-rotation
+    var(--sun-rotation-speed)
+    var(--delay)
+    linear
+    infinite;
+    visibility: hidden;
+  }
+  
+  .sunspot::after {
+    content: '';
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: hsl(25, 100%, 10%);
+    border-radius: 50%;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+    box-shadow: 0 0 calc(var(--rel-clamped-width) / 60) #00000088;
+  }
+  
+  @keyframes sun-rotation {
+    0% {
+      visibility: visible;
+      transform: translate(
+              calc(
+                      cos(var(--spot-angle-start)) * var(--spot-angle-offset)
+              ),
+              calc(
+                      sin(var(--spot-angle-start)) * var(--spot-angle-offset)
+              )
+      );
+    }
+    50%, 100% {
+      visibility: visible;
+      transform: translate(
+              calc(
+                      cos(var(--spot-angle-end)) * var(--spot-angle-offset)
+              ),
+              calc(
+                      sin(var(--spot-angle-end)) * var(--spot-angle-offset)
+              )
+      );
+    }
+  }
+  
+  .orbit-plane {
+    --radius: 100%;
+    --rotate-x: 75deg;
+    --rotate-y: 0deg;
+    --satellite-shadow-compensation: 1;
+    position: absolute;
+    top: calc(50% - var(--radius));
+    left: calc(50% - var(--radius));
+    right: calc(50% - var(--radius));
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+  }
+  
+  .orbit {
+    --radius: 100%;
+    --year-duration: 5s;
+    --distance: 0;
+    --satellite-scale: 0.8;
+    position: absolute;
+    top: calc((100% - var(--radius)) / 2);
+    left: calc((100% - var(--radius)) / 2);
+    bottom: calc((100% - var(--radius)) / 2);
+    right: calc((100% - var(--radius)) / 2);
+    transform-style: preserve-3d;
+    animation: orbit-rotation var(--year-duration) linear infinite;
+  }
+  
+  @keyframes orbit-rotation {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(-360deg);
+    }
+  }
+  
+  .satellite {
+    --size: 1;
+    --offset: 0;
+    --offset-orbit-x: 0;
+    --offset-orbit-y: 0;
+    --offset-deg: calc(360deg * var(--offset-orbit-x));
+    position: absolute;
+    top: calc((1 - cos(var(--offset-deg))) * (50% - 100% * var(--size) / 2));
+    left: calc((1 - sin(var(--offset-deg))) * (50% - 100% * var(--size) / 2));
+    width: calc(100% * var(--size));
+    aspect-ratio: 1;
+    transform-style: preserve-3d;
+    animation:
+            invert
+            var(--year-duration)
+            calc(-1 * var(--year-duration))
+            linear
+            infinite;
+  }
+  
+  @keyframes invert {
+    0% {
+      transform:
+              rotateX(-90deg)
+              rotateY(360deg)
+              rotateZ(0deg)
+              translate(0, calc(var(--offset-orbit-y) * var(--rel-clamped-width)))
+              scale(1, 1);
+    }
+    100% {
+      transform:
+              rotateX(-90deg)
+              rotateY(0deg)
+              rotateZ(0deg)
+              translate(0, calc(var(--offset-orbit-y) * var(--rel-clamped-width)))
+              scale(1, 1);
+    }
+  }
+  
+  .satellite > * {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-style: preserve-3d;
+    animation:
+            satellite-scale
+            var(--year-duration)
+            calc(-1 * var(--offset-orbit-x) * var(--year-duration))
+            infinite;
+  }
+  
+  .satellite > *::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    border-radius: 50% / 50%;
+    transform-style: preserve-3d;
+    animation:
+            satellite-shadow
+            var(--year-duration)
+            calc(-1 * var(--offset-orbit-x) * var(--year-duration))
+            linear
+            infinite;
+  }
+  
+  .satellite > .asteroid::after {
+    background: hsla(45, 5%, 50%);
+  }
+  
+  .satellite > .earth::after {
+    background: hsla(45, 5%, 40%) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAAGBQTFRFGDRdAyFNIDxkQld5CCZTIztsJD1lAAAArsblO230dJfgP2vUnLbbbovAOF2vN1GERnb0Un/yW3asWH3PeY+uhKfyYXaVjafNT2WNeJ3zv9f0nrzzX4rzkLHzrcjzbZX0L9IPbAAAAAh0Uk5TfSC49Uv+4wC/XoCAAAACEUlEQVQoz12T2WKrMAxECWDC4n1fZOv//7IiaXp760cOtkaj0fT8nHXe1LLEmJd5/fk4feDGGFPeR0U/5G39H290zXohhJUi+czY9gs/lhytsM4JvvPEebJZsccH3zSldDrX6uhw8jMl/+Y33nKWibdQChhTsDRzXdbm5Y1nla1LYxAwGjsChvPmcb7xGrMVrtemQdPB0ltt6C6Z80p4y164CxpqMMcBZdRWey9O2rg9p5VlIS5ttMGCiGFUgn20xoXP6zQrJd2JAKW83q11tF5Cb9zZPE9btPIcI5AmLKXXEfoIASGchLeJ5eTCKNA7GMReu8HR26AGLqnUxFRyF3U7aqFrpQVjXrXBOJGXKUexl5fgPsgzqjpIV2sAztk4ZZ/2gVBqfb8NJH/QwcC5j1P0KTU0UOttKrUHh8Y2qL/9jcUZAsCrJTwOHYyG3so3XrJNJ7U1Xn4UfWiAW1nrPPllmqk4v1lrRQMarQ2QPKonBNmyLlScGg1Ik6C6QG8XbA3P5NlKI6EonGHoA2gY5BwZVqAAReIeyXNlyvJ9DJpWozcPU8hzJFNsvAf6pIySOooDUBA6tRBCP5OUav4OE1NSXHu9nQ+kn9LiklXbTxSJS7fvt1kAx+Wc9H57/Aty9FImms3Or+uSBOPy+LUGc/RkT6KgO0lVY57/LpHKlEnrvacV+LtE7xVkSuW8bL9W8AvOdz8ZXmQqKAAAAABJRU5ErkJggg==") no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+  }
+  
+  .satellite > .moon::after {
+    background: #fff;
+  }
+  
+  .satellite > .mars::after {
+    background: hsla(45, 5%, 40%) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAAGBQTFRFsW89lWA2jVwzsm8+qGo72oVJrW08h1gxlWA15IpMrW09jlw0l2E2nGM3v3ZC3YdK3odKyHtE75BP8JFQ8JFQ8JFQ8JFQ8JFQw3hD8JFQ8JFQ8JFQ8JFQ8JFQ8JFQAAAAe3ooYQAAACB0Uk5Tk0+hrcTz6g7P5tkiYurz49bk79XR3vvm2PH26ezi2QCQ4vSgAAABm0lEQVQoz1VSWXaEMAzLLAw7ZHMSx0vvf8uaTtvX+icQYSRbch/vGrf7ftV0v43fV+59bNP+Oo6jtXAs0/YHWg1o4TxnqyG05bn+QOt0AUIRKWVV39qyvqF1f4VTFSqiZgWuerarz6D7KwyoqkI19k5UFYfjeUHbdJzEkLQS9cLCSELDsX24cVoCVYYMHXsphQk0Aw2v0W17OCv2CPwFIWnSBDAfmzOmSt0KmZhj1ZwERLU5N72GwsyIREwCKZtIsAe/uL3NpapW42ciMTWitXI8g9uDj/aCAEZoaqRHtf8ZmduPFAtW1kz2BWntXQRUo0FhTrVcKxLTZmNbi7Fd0NR8Vhsz5x6jZMHIrJrS3Nx98WAQ5lyJsXdGGxs0eeduS5Brs1+y2dZRe0EBajc3LuaHEKRks8qFIYrC0EZb79KM31qUbCO9l44mJWyXKY9mbMnkJzAeo0Ni/3hb+WynqDGkDJHNa/Okrd8BWJpPag1gHpdO5vL6G5tnC15rRBaI6sNj/Ru25Wjez3E+LTTbvxxaRB/PdtVj+4noJ91nOp3NTB6wAAAAAElFTkSuQmCC") no-repeat;
+    background-size: cover;
+  }
+  
+  .satellite > .jupiter::after {
+    background: hsla(45, 5%, 40%) url("data:image/png;base64,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") no-repeat;
+    background-size: cover;
+  }
+  
+  .satellite > .saturn::after {
+    background: hsla(45, 5%, 40%) url("data:image/png;base64,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") no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+  }
+  
+  .satellite > .saturn > .ring {
+    position: absolute;
+    top: -80%;
+    bottom: -80%;
+    left: -80%;
+    right: -80%;
+    border-radius: 50%;
+    background:
+      radial-gradient( 50% 50% at 50% 50%,
+        transparent,
+        transparent calc(var(--rel-clamped-width) * var(--size) / 0.2),
+        hsla(45, 30%, 65%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.19),
+        hsla(45, 10%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.18),
+        hsla(45, 25%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1775),
+        hsla(45, 15%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+        hsla(45, 15%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.15),
+        hsla(45, 15%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.145),
+        hsla(45, 25%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.14),
+        hsla(45, 25%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.135),
+        hsla(45, 25%, 45%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1325),
+        hsla(45, 20%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.13),
+        transparent calc(var(--rel-clamped-width) * var(--size) / 0.125),
+        hsla(45, 20%, 45%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.12),
+        hsla(45, 20%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+        hsla(45, 20%, 40%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.115));
+    transform: rotateX(90deg);
+    transform-style: preserve-3d;
+    animation:
+      ring-shadow
+      var(--year-duration)
+      calc(-1 * var(--offset-orbit-x) * var(--year-duration))
+      steps(1)
+      infinite;
+  }
+  
+  @keyframes ring-shadow {
+    0%, 75%, 100% {
+      background:
+        radial-gradient( 50% 50% at 50% 50%,
+          transparent,
+          transparent calc(var(--rel-clamped-width) * var(--size) / 0.2),
+          hsla(45, 30%, 65%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.19),
+          hsla(45, 10%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.18),
+          hsla(45, 25%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1775),
+          hsla(45, 15%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+          hsla(45, 15%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.15),
+          hsla(45, 15%, 50%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.145),
+          hsla(45, 25%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.14),
+          hsla(45, 25%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.135),
+          hsla(45, 25%, 45%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1325),
+          hsla(45, 20%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.13),
+          transparent calc(var(--rel-clamped-width) * var(--size) / 0.125),
+          hsla(45, 20%, 45%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.12),
+          hsla(45, 20%, 55%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+          hsla(45, 20%, 40%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.115));
+    }
+    25% {
+      background:
+        radial-gradient( 50% 50% at 50% 50%,
+          transparent,
+          transparent calc(var(--rel-clamped-width) * var(--size) / 0.2),
+          hsla(45, 30%, 45%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.19),
+          hsla(45, 10%, 15%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.18),
+          hsla(45, 25%, 30%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1775),
+          hsla(45, 20%, 25%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+          hsla(45, 20%, 30%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.15),
+          hsla(45, 15%, 30%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.145),
+          hsla(45, 25%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.14),
+          hsla(45, 25%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.135),
+          hsla(45, 25%, 25%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.1325),
+          hsla(45, 20%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.13),
+          transparent calc(var(--rel-clamped-width) * var(--size) / 0.125),
+          hsla(45, 20%, 25%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.12),
+          hsla(45, 20%, 35%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.175),
+          hsla(45, 20%, 20%, 100%) calc(var(--rel-clamped-width) * var(--size) / 0.115));
+    }
+  }
+  
+  @keyframes satellite-scale {
+    0%, 100% {
+      transform: scale(var(--satellite-scale));
+      animation-timing-function: cubic-bezier(.48,.03,.9375,.9);
+    }
+    25% {
+      transform: scale(calc(var(--satellite-scale) + (1 - var(--satellite-scale)) / 2));
+      animation-timing-function: cubic-bezier(.03,.48,.9,.9375);
+    }
+    50% {
+      transform: scale(1);
+      animation-timing-function: cubic-bezier(.48,.03,.9375,.9);
+    }
+    75% {
+      transform: scale(var(--satellite-scale));
+      animation-timing-function: cubic-bezier(.03,.48,.9,.9375);
+    }
+  }
+  
+  @keyframes satellite-shadow {
+    0%, 100% {
+      box-shadow: inset
+      0
+      0
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 4.5)
+      rgba(0, 0, 0, 0.5);
+      border-radius: 50% / 50%;
+    }
+    25% {
+      box-shadow: inset
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.9)
+      0
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--lightbulb-relative-width) *  var(--clamped-width) / 2.25)
+      rgba(0, 0, 0, 0.5);
+      border-radius: 0% / 50%;
+      animation-timing-function: cubic-bezier(.74,.24,.74,.24);
+    }
+    50% {
+      box-shadow: inset
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.18)
+      0
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.3)
+      rgba(0, 0, 0, 0.5);
+      border-radius: 0% / 50%;
+      animation-timing-function: steps(1);
+    }
+    50.01% {
+      box-shadow: inset
+      calc(-1 * var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.18)
+      0
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.3)
+      rgba(0, 0, 0, 0.5);
+      border-radius: 0% / 50;
+      animation-timing-function: cubic-bezier(.24,.74,.24,.74);
+    }
+    75% {
+      box-shadow: inset
+      calc(-1 * var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 0.9)
+      0
+      calc(var(--satellite-shadow-compensation) * var(--size) * var(--rel-clamped-width) / 2.25)
+      rgba(0, 0, 0, 0.5);
+      border-radius: 0% / 50%;
+      animation-timing-function: linear;
+    }
+  }
+  
+  .planets {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 1;
+    transform-style: preserve-3d;
+  }

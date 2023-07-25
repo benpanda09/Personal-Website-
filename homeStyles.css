@@ -1,0 +1,103 @@
+.facebookimg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.linkedinimg{
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+
+.githubimg{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.socials{
+    position:relative;
+    top: 0%;
+}
+
+.facebook{
+    position: absolute;
+    top: 15%;
+    width: 50px;
+    height: 50px;
+}
+
+.github{
+    position: absolute;
+    top: 25%;
+    width: 50px;
+    height: 50px;
+}
+
+.linkedin{
+    position: absolute;
+    top: 37%;
+    right: 6.5%;
+    width: 75px;
+    height: 75px;
+}
+
+
+.maincontainer{
+    position: relative;
+    left: -5%;
+}
+.facebookimg:hover{
+ opacity: 0.8;
+
+}
+
+.githubimg:hover{
+ opacity: 0.8;
+
+}
+
+.linkedinimg:hover{
+ opacity: 0.3;
+
+}
+
+
+
+
+.introtext{
+    position: absolute;
+    left: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 400px;
+    border-left:1em solid transparent;
+    border-right:1em solid transparent;
+    text-overflow: ellipsis;
+}
+
+
+.Nametext{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+
+}
+
+.Positiontext{
+ 
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+
+.brieftext{
+    white-space: normal;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+}

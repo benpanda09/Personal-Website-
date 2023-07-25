@@ -1,0 +1,352 @@
+.Project{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 420px));
+    column-gap: 29px;
+    row-gap: 40px;
+}
+
+.Proj1{
+    position: relative;
+    width: 25%;
+
+}
+
+.image1{
+    display: block;
+    width: 300px;
+    height: 280px; 
+    object-fit: cover;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+
+
+.overlay1{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.76);
+    overflow: hidden;
+    width: 300px;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+
+.Proj1:hover .overlay1{
+    height: 100%;
+
+}
+
+.Proj2{
+    position: relative;
+    width: 25%;
+
+}
+
+.image2{
+    display: block;
+    width: 300px;
+    height: 280px; 
+    object-fit: cover;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+
+
+.overlay2{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.76);
+    overflow: hidden;
+    width: 300px;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+
+.Proj2:hover .overlay2{
+    height: 100%;
+
+}
+
+.Proj3{
+    position: relative;
+    width: 25%;
+
+}
+
+.image3{
+    display: block;
+    width: 300px;
+    height: 280px; 
+    object-fit: cover;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+
+
+.overlay3{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.76);
+    overflow: hidden;
+    width: 300px;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+
+.Proj3:hover .overlay3{
+    height: 100%;
+
+}
+
+.Proj4{
+    position: relative;
+    width: 25%;
+
+}
+
+.image4{
+    display: block;
+    width: 300px;
+    height: 280px; 
+    object-fit: cover;
+    opacity: 0.3;
+    border-radius: 15px;
+    
+}
+
+
+.overlay4{
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgba(27, 27, 27, 0.76);
+    overflow: hidden;
+    width: 300px;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+
+.Proj4:hover .overlay4{
+    height: 100%;
+
+}
+
+h1{
+    width: 269px;
+    margin-top: 160px;
+    margin-left: 15px;
+    color: white; 
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.View1{
+    width: 100px;
+    background-color:rgb(241, 206, 139);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 215px;
+    left: 97px;
+    cursor: pointer;
+}
+
+
+.View2{
+    width: 100px;
+    background-color:rgb(241, 206, 139);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 215px;
+    left: 97px;
+    cursor: pointer;
+}
+
+
+.View3{
+    width: 100px;
+    background-color:rgb(241, 206, 139);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 215px;
+    left: 97px;
+    cursor: pointer;
+}
+
+
+.View4{
+    width: 100px;
+    background-color:rgb(241, 206, 139);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 215px;
+    left: 97px;
+    cursor: pointer;
+
+}
+
+
+.View1:hover{
+    opacity: 0.4;
+}
+
+
+.View3:hover{
+    opacity: 0.4;
+}
+
+.View2:hover{
+    opacity: 0.4;
+}
+
+.View4:hover{
+    opacity: 0.4;
+}
+
+
+.video1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.video1.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.video1 video{
+    max-width: 900px;
+    outline: none;
+}
+
+.video2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.video2.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.video2 video{
+    max-width: 900px;
+    outline: none;
+}
+
+.video3{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.video3.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.video3 video{
+    max-width: 900px;
+    outline: none;
+}
+
+.video4{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.video4.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.video4 video{
+    max-width: 900px;
+    outline: none;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+
+}

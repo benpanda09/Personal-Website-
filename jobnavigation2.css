@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li, a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(14, 114, 172);
+    text-decoration: none;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+
+
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+    
+
+}
+
+.nav__links{
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.nav__links li{
+    display:inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0;
+}
+
+.nav__links li a:hover{
+    color: rgb(171, 171, 189);
+}
+
+
+@media (max-width:590px) {
+    .nav__links {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: 13%;
+        display: inline-block;
+    }
+  }
+
+  @media (max-width:590px) {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: 2%;
+    }
+  }
+
+@media (max-width:414px) {
+    .nav__links {
+        position: absolute;
+        left: 42%;
+        transform: translate(-50%, 0%);
+        top: 14%;
+    }
+  }
+
+  @media (max-width:375px) {
+    .nav__links {
+        position: absolute;
+        left: 42%;
+        transform: translate(-50%, 0%);
+        top: 17%;
+    }
+  }
+
+  @media (max-width:414px) {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: 2%;
+    }
+  }
+
+
+@media (max-width:414px) {
+    .jobclass {
+        position: absolute;
+        left: 58%;
+        top: 0%;
+    }
+  }
+
+
+  
+@media (max-width:414px) {
+    .projectclass {
+        position: absolute;
+        left: 100%;
+        top: 0%;
+    }
+  }

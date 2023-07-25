@@ -1,0 +1,189 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --bar-width: 25px;
+    --bar-height: 3px;
+    --hamburger-gap: 6px;
+    --foreground: #ffce65;
+    --background: #ffce65;
+    --color:var(--background);
+    --animation-timing: 300ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --gap: 45px;
+
+
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content:"";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), width var(--animation-timing), translate var(--animation-timing), rotate var(--animation-timing), background-color var(--animation-timing);
+    transform-origin: left center;
+ 
+}
+
+.hamburder-menu:has(input:focus-visible)::before
+.hamburder-menu:has(input:focus-visible)::after
+.hamburder-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);        
+}
+
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    margin-left: 17px;
+    margin-top: 17px;
+    padding: 0;
+    cursor: pointer;
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+}
+
+.hamburder-menu:has(input:checked){
+    --foreground:white;
+    --background:#333;
+}
+
+.hamburger-menu:has(input:checked)::before{
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/ -2);
+    
+}
+
+.hamburger-menu:has(input:checked)::after{
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/ 2);
+
+}
+
+.hamburger-menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked{
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar{
+    transition: translate var(--animation-timing);
+    translate: 0;
+    padding: 0;
+    padding-top: -10;
+    margin-bottom: 2000000px;
+    background-color: rgb(30, 32, 39);
+    color: var(--background);
+    max-width: 10rem;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar{
+    translate:0 2%;
+    transition: translate var(--animation-timing), opacity var(--animation-timing);
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.homebut{
+    border: none;
+    background-color:rgb(30, 32, 39);
+    margin-left: 4px;
+    margin-top: var(--gap);
+    cursor: pointer;
+    
+}
+
+.projectbut{
+    border: none;
+    background-color:rgb(30, 32, 39);
+    margin-left: -1px;
+    margin-top: var(--gap);
+    cursor: pointer;
+    
+}
+
+.jobbut{
+    border: none;
+    background-color:rgb(30, 32, 39);
+    margin-left: 9px;
+    margin-top: var(--gap);
+    cursor: pointer;
+    
+}
+
+.aboutbut{
+    border: none;
+    background-color:rgb(30, 32, 39);
+    margin-left: 4px;
+    margin-top: var(--gap);
+    cursor: pointer;
+
+    
+    
+}
+
+.contactbut{
+    border: none;
+    background-color:rgb(30, 32, 39);
+    margin-left: 1px;
+    margin-top: var(--gap);
+    cursor: pointer;
+    
+}
+
+.text{
+    color: rgb(165, 165, 165);
+    font-family: 'Roboto', san-serif;
+    font-weight: 600;
+    
+}
+
+.homebut:hover{
+    opacity: 0.4;
+}
+
+
+.aboutbut:hover{
+    opacity: 0.4;
+}
+
+
+.jobbut:hover{
+    opacity: 0.4;
+}
+
+
+.projectbut:hover{
+    opacity: 0.4;
+}
+
+
+.contactbut:hover{
+    opacity: 0.4;
+}
+
+.taskbar{
+    position: fixed;
+    top: 15px;
+    bottom: 0;
+    right: 0px;
+}
+
