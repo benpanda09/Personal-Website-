@@ -1,14 +1,82 @@
+.maincontainer{
+    position: relative;
+   
+    left: 5%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.textcontainer{
+    position: relative;;
+    top: 33%;
+    left: 10%;
+    height: 650px;
+    width: 450px;
+    white-space: normal;
+    overflow: hidden;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    
+}
+
+.socialcontainer{
+    position: relative;
+    top: 300px;
+    height: 240px;
+    left: 100%;
+    top: 42%;
+    transform: translate(-50%, 0%);
+    width: 60px;
+}
+
+
+
 .facebookimg{
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
+.animations{
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    width: 902px;
+    height: 885px;
+    position: relative;
+    white-space: normal;
+    right: 15%;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _________________________________________________________________ */
+
+
 
 .linkedinimg{
-    width: 75px;
-    height: 75px;
+    width: 78px;
+    height: 78px;
     cursor: pointer;
+    position: absolute;
+    top: 80px;
+    left: -13px;
 }
 
 
@@ -16,40 +84,11 @@
     width: 55px;
     height: 55px;
     cursor: pointer;
-}
-
-.socials{
-    position:relative;
-    top: 0%;
-}
-
-.facebook{
     position: absolute;
-    top: 15%;
-    width: 50px;
-    height: 50px;
-}
-
-.github{
-    position: absolute;
-    top: 25%;
-    width: 50px;
-    height: 50px;
-}
-
-.linkedin{
-    position: absolute;
-    top: 37%;
-    right: 6.5%;
-    width: 75px;
-    height: 75px;
+    top: 180px
 }
 
 
-.maincontainer{
-    position: relative;
-    left: -5%;
-}
 .facebookimg:hover{
  opacity: 0.8;
 
@@ -65,25 +104,15 @@
 
 }
 
-
-
-
-.introtext{
-    position: absolute;
-    left: 500px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 400px;
-    border-left:1em solid transparent;
-    border-right:1em solid transparent;
-    text-overflow: ellipsis;
-}
-
-
 .Nametext{
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
+    overflow: hidden;
+    max-width: 400px;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    text-overflow: ellipsis;
 
 }
 
@@ -92,6 +121,11 @@
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
+    overflow: hidden;
+    max-width: 400px;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    text-overflow: ellipsis;
 }
 
 
@@ -99,5 +133,10 @@
     white-space: normal;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    max-width: 400px;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    text-overflow: ellipsis;
 
 }

@@ -1,13 +1,14 @@
-* {
+.animations {
     box-sizing: border-box;
   }
   
   body {
     background: rgb(28, 29, 36);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    
+    
   }
   
   .wrapper {
@@ -16,7 +17,7 @@
     --max-width: 900px;
     --clamped-width: clamp(var(--min-width), var(--mid-width), var(--max-width));
     position: relative;
-    padding: 1rem;
+    padding: 1px;
     padding-top: 5%;
     padding-bottom: 5%;
     min-width: var(--clamped-width);
@@ -25,6 +26,220 @@
     border-radius: 25% / 50%;
     overflow: hidden;
   }
+
+  @media screen and (max-width: 1856px){
+    .wrapper{
+       --mid-width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 1856px){
+  .animations{
+     position: relative;
+     top: 10%;
+     left: 5%;
+     width: auto;
+  }
+}
+
+
+@media screen and (max-width: 1809px){
+  .animations{
+     position: relative;
+     top: 10%;
+     left: -14%;
+     width: auto;
+  }
+}
+
+@media screen and (max-width: 1705px){
+  .wrapper{
+     --mid-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1705px){
+  .animations{
+     position: relative;
+     top: 25%;
+     left: -3%;
+  }
+}
+
+@media screen and (max-width: 1290px){
+  .textcontainer{
+    width: 250px;
+    position: relative;
+    left: -24%;
+  }
+}
+@media screen and (max-width: 1290px){
+  .socialcontainer{
+    position: relative;
+    left: 10%
+  }
+}
+@media screen and (max-width: 1290px){
+  .animations{
+    position: relative;
+    top: 35%;
+    left:-33%;
+  }
+}
+
+
+@media screen and (max-width: 925px){
+  .textcontainer{
+    width: 200px;
+    position: relative;
+    left: -28%;
+  }
+}
+
+@media screen and (max-width: 925px){
+  .socialcontainer{
+    width: 20px;
+    position: relative;
+    left: -8%;
+  
+  }
+}
+
+@media screen and (max-width: 920px){
+  .textcontainer{
+    width: 400px;
+    position: relative;
+    left: 8%;
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 920px){
+  .socialcontainer{
+    width: 60px;
+    position: relative;
+    left: 70%;
+    top: 13%;
+  }
+}
+
+
+@media screen and (max-width: 920px){
+  .wrapper{
+    --mid-width: 550px
+  }
+}
+@media screen and (max-width: 920px){
+  .animations{
+    position: relative;
+    left: -90%;
+    top: 70%;
+    width: 550px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 610px){
+  .textcontainer{
+    width: 250px;
+    position: relative;
+    left: 50%;
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 610px){
+  .socialcontainer{
+    width: 40px;
+    position: relative;
+    left: 180%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 610px){
+  .animations{
+    position: relative;
+    left: -65%;
+    top: 85%;
+    width: 450px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 610px){
+  .wrapper{
+    --mid-width: 450px
+  }
+}
+
+
+@media screen and (max-width: 560px){
+  .textcontainer{
+    width: 250px;
+    position: relative;
+    left: 10%;
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 560px){
+  .socialcontainer{
+    width: 40px;
+    position: relative;
+    left: 20%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 560px){
+  .animations{
+    position: relative;
+    left: -87%;
+    top: 85%;
+    width: 350px;
+    height: 400px;
+  }
+}
+
+
+@media screen and (max-width: 560px){
+  .wrapper{
+    --mid-width: 350px
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  .socialcontainer{
+    width: 40px;
+    position: relative;
+    left: 58%;
+    top: 25%;
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  .animations{
+    position: relative;
+    left: -95%;
+    top: 85%;
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .wrapper{
+    --mid-width: 350px
+  }
+}
+
+
+
+/* ------------------------------ */
   
   .wrapper::before {
     content: '';
