@@ -13,14 +13,15 @@
 
 .textcontainer{
     position: relative;;
-    top: 33%;
+    top: 35%;
     left: 10%;
     height: 650px;
-    width: 450px;
+    max-width:  382px;
     white-space: normal;
     overflow: hidden;
-    border-left:1px solid transparent;
-    border-right:1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    
     
 }
 
@@ -32,8 +33,13 @@
     top: 42%;
     transform: translate(-50%, 0%);
     width: 60px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 7.5s forwards;
+    
+    
 }
-
+ 
 
 
 .facebookimg{
@@ -43,26 +49,25 @@
 }
 
 .animations{
-    border-left:1px solid transparent;
-    border-right:1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
     width: 902px;
     height: 885px;
     position: relative;
     white-space: normal;
     right: 15%;
     overflow: hidden;
+    top: 10%;
+    opacity: 0;
+    animation: Pop 0.1s ease-in-out 7.5s forwards;
 }
 
 
-
-
-
-
-
-
-
-
-
+@keyframes Pop{
+    to{
+        opacity: 1;
+    }
+}
 
 
 
@@ -107,14 +112,67 @@
 .Nametext{
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
+    font-size: 33px;
     overflow: hidden;
-    max-width: 400px;
+    width: 382px;
     border-left:1px solid transparent;
     border-right:1px solid transparent;
     text-overflow: ellipsis;
+    /* outline: 2px solid red; */
+
+    
 
 }
+
+
+
+
+.Nametext::before, 
+.Nametext::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    box-sizing: content-box;
+}
+
+/* rgb(28, 29, 36); */
+
+.Nametext::before{
+    background-color: rgb(28, 29, 36);
+    height: 40px;
+    width: 383px;
+    position: absolute;
+    top: 35px;
+    
+    animation: typewriter 6s steps(19) 1s forwards;
+    
+}
+
+.Nametext::after{
+    width: 0.125em;
+    background-color: white;
+    height: 40px;
+    position: absolute;
+    top: 35px;
+    animation: typewriter 6s steps(19, end) 1s forwards, blink 500ms steps(19) infinite;
+}
+
+
+@keyframes typewriter{
+    to{ 
+        left: 100%;
+    }
+}
+
+@keyframes blink{
+    to{
+        background: transparent;
+    }
+}
+
 
 .Positiontext{
  
@@ -126,6 +184,17 @@
     border-left:1px solid transparent;
     border-right:1px solid transparent;
     text-overflow: ellipsis;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 7.5s forwards;
+}
+
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -138,5 +207,8 @@
     border-left:1px solid transparent;
     border-right:1px solid transparent;
     text-overflow: ellipsis;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 7.5s forwards;
 
 }
