@@ -148,7 +148,7 @@
 
 h1{
     width: 269px;
-    margin-top: 160px;
+    margin-top: 140px;
     margin-left: 15px;
     color: white; 
     font-size: 30px;
@@ -354,7 +354,9 @@ h1{
 
 }
 
-
+.videosize2{
+    height: 75%
+}
 
 
 /* 

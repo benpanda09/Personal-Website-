@@ -329,7 +329,7 @@
         <img class="image1" src="Pictures/wp9250904.jpg" alt="img">
           <div class="overlay1">
           <h1> Project 1 </h1>
-          <button class="View1" onclick="toggleVideo()"> 
+          <button class="View1" onclick="toggleVideo1()"> 
             View demo 
           </button>
         </div>
@@ -338,7 +338,7 @@
         <img class="image2" src="Pictures/7qegghybz7ab8a7q.jpg" alt="img">
           <div class="overlay2">
           <h1> Project 2 </h1>
-          <button class="View2" onclick="toggleVideo()"> 
+          <button class="View2" onclick="toggleVideo2()"> 
             View demo 
           </button>
         </div>
@@ -346,8 +346,8 @@
       <div class="Proj3" >
         <img class="image3" src="Pictures/360_F_523577655_GJLIdX3s9n26qU3Ai1ixJ1ANDKrkG82t.jpg" alt="img">
           <div class="overlay3">
-          <h1> Project 3 </h1>
-          <button class="View3" onclick="toggleVideo()"> 
+          <h1> Project 3 (N/A) </h1>
+          <button class="View3" onclick="toggleVideo3()"> 
             View demo 
           </button>
         </div>
@@ -355,48 +355,48 @@
       <div class="Proj4" >
         <img class="image4" src="Pictures/CITYSCAPE1142023.png" alt="img">
           <div class="overlay4">
-          <h1> Project 4 </h1>
-          <button class="View4" onclick="toggleVideo()"> 
+          <h1> Project 4 (N/A)</h1>
+          <button class="View4" onclick="toggleVideo4()"> 
             View demo 
           </button>
         </div>
       </div>
       <div class="video1">
-        <video class="videosize1" src="Videos/Arm.mp4" controls="true" autoplay="true"></video>
-        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo()">
+        <video class="videosize1" src="Videos/Car.mp4" controls preload="none" muted ></video>
+        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo1()">
       </div>
       <script>
-        function toggleVideo(){
+        function toggleVideo1(){
           const video1 = document.querySelector('.video1');
           video1.classList.toggle('active')
         }
       </script>
       <div class="video2">
-        <video class="videosize2" src="Videos/Car.mp4" controls="true" autoplay="true"></video>
-        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo()">
+        <video class="videosize2" src="Videos/Arm.mp4" controls preload="none" muted></video>
+        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo2()">
       </div>
       <script>
-        function toggleVideo(){
+        function toggleVideo2(){
           const video2 = document.querySelector('.video2');
           video2.classList.toggle('active')
         }
       </script>
       <div class="video3">
-        <video class="videosize3" src="Videos/Untitled.mp4" controls="true" autoplay="true"></video>
-        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo()">
+        <video class="videosize3" src="Videos/Untitled.mp4" controls preload="none" muted></video>
+        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo3()">
       </div>
       <script>
-        function toggleVideo(){
+        function toggleVideo3(){
           const video3 = document.querySelector('.video3');
           video3.classList.toggle('active')
         }
       </script>
       <div class="video4">
-        <video class="videosize4" src="Videos/Untitled.mp4" controls="true" autoplay="true"></video>
-        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo()">
+        <video class="videosize4" src="Videos/Untitled.mp4" controls preload="none" muted></video>
+        <img src="Pictures/x-icon.png" class="close" onclick="toggleVideo4()">
       </div>
       <script>
-        function toggleVideo(){
+        function toggleVideo4(){
           const video4 = document.querySelector('.video4');
           video4.classList.toggle('active')
         }
