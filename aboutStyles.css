@@ -509,6 +509,13 @@
     transform: translate(-50%, 0%);
 }
 
+.ssskill10{
+    position: absolute;
+    top: 335px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
 
 
 
@@ -555,39 +562,39 @@
 }
 .hsskill5{
     position: absolute;
-    top: 148px;
+    top: 175px;
     left: 55%;
     transform: translate(-50%, 0%);
 }
 .hsskill6{
     position: absolute;
-    top: 177px;
+    top: 197px;
     left: 55%;
     transform: translate(-50%, 0%); 
 }
 .hsskill7{
     position: absolute;
-    top: 205px;
+    top: 225px;
     left: 55%;
     transform: translate(-50%, 0%);
     
 }
 .hsskill8{
     position: absolute;
-    top: 230px;
+    top: 250px;
     left: 55%;
     transform: translate(-50%, 0%);
 }
 .hsskill9{
     position: absolute;
-    top: 275px;
+    top: 295px;
     left: 55%;
     transform: translate(-50%, 0%);
 }
 
 .hsskill10{
     position: absolute;
-    top: 320px;
+    top: 340px;
     left: 55%;
     transform: translate(-50%, 0%);
 }
@@ -659,6 +666,13 @@
 .esskill9{
     position: absolute;
     top: 305px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.esskill10{
+    position: absolute;
+    top: 335px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
